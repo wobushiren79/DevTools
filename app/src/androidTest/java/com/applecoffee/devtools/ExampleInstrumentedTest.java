@@ -4,8 +4,12 @@ import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.applecoffee.devtools.utils.TimeUtils;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import java.util.Date;
 
 import static org.junit.Assert.*;
 
@@ -17,10 +21,7 @@ import static org.junit.Assert.*;
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
     @Test
-    public void useAppContext() throws Exception {
-        // Context of the app under test.
-        Context appContext = InstrumentationRegistry.getTargetContext();
+    public void Test() {
 
-        assertEquals("com.applecoffee.devtools", appContext.getPackageName());
     }
 }
