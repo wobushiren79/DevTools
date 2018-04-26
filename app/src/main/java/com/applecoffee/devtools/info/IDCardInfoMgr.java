@@ -1,18 +1,10 @@
-package com.huanmedia.ilibray.utils;
+package com.applecoffee.devtools.info;
 
 
 import java.util.Hashtable;
 
 /**
  * 主要功能： 提供App应用常见数据字典定义
- *
- * @Prject: CommonUtilLibrary
- * @Package: com.jingewenku.abrahamcaijin.commonutil
- * @author: AbrahamCaiJin
- * @date: 2017年05月03日 16:37
- * @Copyright: 个人版权所有
- * @Company:
- * @version: 1.0.0
  */
 public class IDCardInfoMgr {
 
