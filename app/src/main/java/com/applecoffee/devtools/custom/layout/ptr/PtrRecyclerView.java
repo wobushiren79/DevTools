@@ -84,6 +84,7 @@ public class PtrRecyclerView extends BaseLinearLayout {
        return mPtrFrameLayout.isRefreshing();
     }
 
+
     /**
      * 设置刷新数据
      */
