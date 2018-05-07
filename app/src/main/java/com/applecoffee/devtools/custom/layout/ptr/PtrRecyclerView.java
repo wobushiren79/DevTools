@@ -6,9 +6,11 @@ import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.RelativeLayout;
 
 import com.applecoffee.devtools.R;
+import com.applecoffee.devtools.base.adapter.BaseRCAdapter;
 import com.applecoffee.devtools.base.layout.BaseLinearLayout;
 
 import in.srain.cube.views.ptr.PtrDefaultHandler2;
@@ -107,7 +109,15 @@ public class PtrRecyclerView extends BaseLinearLayout {
     }
 
     /**
+     * 获取recycler的适配
+     */
+    public RecyclerView.Adapter getAdapter() {
+        return mPtrRecyclerView.getAdapter();
+    }
+
+    /**
      * 设置头部刷新样式
+     *
      * @param headerLayout
      */
     public void setHeadLoadLayout(CustomPtrLoadView headerLayout) {
@@ -116,6 +126,7 @@ public class PtrRecyclerView extends BaseLinearLayout {
 
     /**
      * 设置脚部刷新样式
+     *
      * @param footLayout
      */
     public void setFootLoadLayout(CustomPtrLoadView footLayout) {
