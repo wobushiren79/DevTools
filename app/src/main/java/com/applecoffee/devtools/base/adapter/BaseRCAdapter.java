@@ -44,6 +44,13 @@ public abstract class BaseRCAdapter<T> extends RecyclerView.Adapter<BaseViewHold
         convert(holder, mDatas.get(position), position);
     }
 
+    /**
+     * 获取上下文对象
+     * @return
+     */
+    public Context getContext() {
+        return mContext;
+    }
 
     @Override
     public int getItemCount() {

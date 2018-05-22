@@ -12,8 +12,10 @@ import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.GregorianCalendar;
 import java.util.Hashtable;
+import java.util.Map;
 import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -948,5 +950,54 @@ public class CheckUtils {
             return false;
         }
         return true;
+    }
+
+
+    public static boolean isEmpty(CharSequence str) {
+        return isNull(str) || str.length() == 0;
+    }
+
+    public static boolean isEmpty(Object[] os) {
+        return isNull(os) || os.length == 0;
+    }
+
+    public static boolean isEmpty(Collection<?> l) {
+        return isNull(l) || l.isEmpty();
+    }
+
+    public static boolean isEmpty(Map<?, ?> m) {
+        return isNull(m) || m.isEmpty();
+    }
+
+    public static boolean isNull(Object o) {
+        return o == null;
+    }
+
+    public static <T> T checkNotNull(T reference) {
+        if (reference == null) {
+            throw new NullPointerException();
+        }
+        return reference;
+    }
+
+    public static <T> T checkNotNull(T reference, String describe) {
+        if (reference == null) {
+            throw new NullPointerException(describe);
+        }
+        return reference;
+    }
+
+    public static String checkReplace(String str) {
+        if (str == null) {
+            return "";
+        }
+        return str;
+    }
+
+    public static String checkReplace(String str, String rep) {
+        if (str == null) {
+            return rep;
+        }
+        return str;
     }
 }
