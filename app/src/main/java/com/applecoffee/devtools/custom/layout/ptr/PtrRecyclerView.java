@@ -78,10 +78,11 @@ public class PtrRecyclerView extends BaseLinearLayout {
 
     /**
      * 是否正在刷新
+     *
      * @return
      */
-    public boolean isRefresh(){
-       return mPtrFrameLayout.isRefreshing();
+    public boolean isRefresh() {
+        return mPtrFrameLayout.isRefreshing();
     }
 
 
@@ -140,5 +141,15 @@ public class PtrRecyclerView extends BaseLinearLayout {
      */
     public void setFootLoadLayout(CustomPtrLoadView footLayout) {
         mPtrFrameLayout.setFooter(footLayout);
+    }
+
+
+    /**
+     * 获取RecyclerView
+     *
+     * @return
+     */
+    public RecyclerView getRecyclerView() {
+        return mPtrRecyclerView;
     }
 }
