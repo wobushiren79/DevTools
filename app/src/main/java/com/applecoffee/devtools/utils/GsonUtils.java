@@ -12,10 +12,10 @@ import java.util.Map;
  * Created by zm.
  */
 
-public class GsonTools {
+public class GsonUtils {
     private static Gson gson = new Gson();
 
-    public GsonTools() {
+    public GsonUtils() {
     }
 
     /**
