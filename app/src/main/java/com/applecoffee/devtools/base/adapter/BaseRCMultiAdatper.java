@@ -19,12 +19,10 @@ public abstract class BaseRCMultiAdatper<T> extends RecyclerView.Adapter<BaseVie
      * 初始化
      *
      * @param context
-     * @param layoutMap 类型map key:viewType, value:对应布局
      */
-    public BaseRCMultiAdatper(Context context, Map<Integer, Integer> layoutMap) {
+    public BaseRCMultiAdatper(Context context) {
         mContext = context;
-        if (mLayoutMap != null)
-            mLayoutMap = layoutMap;
+        mLayoutMap = setLayoutMap();
     }
 
     @Override
@@ -104,6 +102,13 @@ public abstract class BaseRCMultiAdatper<T> extends RecyclerView.Adapter<BaseVie
     }
 
     public abstract void convert(BaseViewHolder holder, T t, int index, int itemType);
+
+    /**
+     * 设置布局
+     *
+     * @return
+     */
+    public abstract Map<Integer, Integer> setLayoutMap();
 
     /**
      * 设置多item判断条件
