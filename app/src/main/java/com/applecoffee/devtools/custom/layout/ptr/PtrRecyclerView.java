@@ -13,6 +13,7 @@ import com.applecoffee.devtools.R;
 import com.applecoffee.devtools.base.adapter.BaseRCAdapter;
 import com.applecoffee.devtools.base.layout.BaseLinearLayout;
 
+import in.srain.cube.views.ptr.PtrDefaultHandler;
 import in.srain.cube.views.ptr.PtrDefaultHandler2;
 
 
@@ -72,9 +73,17 @@ public class PtrRecyclerView extends BaseLinearLayout {
     /**
      * 设置下拉刷新监听
      */
+    public void setPtrHandle(PtrDefaultHandler ptrHandle) {
+        mPtrFrameLayout.setPtrHandler(ptrHandle);
+    }
+
+    /**
+     * 设置下拉刷新监听
+     */
     public void setPtrHandle2(PtrDefaultHandler2 ptrHandler) {
         mPtrFrameLayout.setPtrHandler(ptrHandler);
     }
+
 
     /**
      * 是否正在刷新
@@ -151,5 +160,13 @@ public class PtrRecyclerView extends BaseLinearLayout {
      */
     public RecyclerView getRecyclerView() {
         return mPtrRecyclerView;
+    }
+
+    /**
+     * 获取刷新控件
+     * @return
+     */
+    public CustomPtrFramelayout getPtrFrameLayout() {
+        return mPtrFrameLayout;
     }
 }
